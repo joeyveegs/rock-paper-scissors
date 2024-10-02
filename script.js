@@ -1,29 +1,29 @@
 function getComputerChoice() {
     let computerChoice = Math.random()
     if (computerChoice < 0.33) {
-        return console.log("rock")
+        computerChoice = "rock"
     }
     else if (computerChoice > 0.33 && computerChoice < 0.66) {
-        return console.log("paper")
+        computerChoice = "paper"
     }
     else {
-        return console.log("scissors");
+        computerChoice = "scissors"
     }
 }
 
 function getHumanChoice() {
-    let humanChoice = prompt("Rock, paper or scissors?\nEnter your choice and press OK:");
+    let humanChoice = prompt("Rock, paper or scissors?\nEnter your choice and press OK:")
     if (humanChoice === null) {
         return
     }
     else if (humanChoice.toLowerCase() == "rock") {
-        return console.log(humanChoice);
+        humanChoice = "rock"
     }
     else if (humanChoice.toLowerCase() == "paper") {
-        return console.log(humanChoice);
+        humanChoice = "paper"
     }
     else if (humanChoice.toLowerCase() == "scissors") {
-        return console.log(humanChoice);
+        humanChoice = "scissors"
     }
     else {
         return invalidhumanChoice()
