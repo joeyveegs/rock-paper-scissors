@@ -1,13 +1,13 @@
 function getComputerChoice() {
     let computerChoice = Math.random()
     if (computerChoice < 0.33) {
-        computerChoice = "rock"
+        return "rock"
     }
     else if (computerChoice > 0.33 && computerChoice < 0.66) {
-        computerChoice = "paper"
+        return "paper"
     }
     else {
-        computerChoice = "scissors"
+        return "scissors"
     }
 }
 
@@ -17,13 +17,13 @@ function getHumanChoice() {
         return
     }
     else if (humanChoice.toLowerCase() == "rock") {
-        humanChoice = "rock"
+        return "rock"
     }
     else if (humanChoice.toLowerCase() == "paper") {
-        humanChoice = "paper"
+        return "paper"
     }
     else if (humanChoice.toLowerCase() == "scissors") {
-        humanChoice = "scissors"
+        return "scissors"
     }
     else {
         return invalidhumanChoice()
@@ -35,5 +35,5 @@ function invalidhumanChoice() {
     return getHumanChoice()
 }
 
-let humanScore = 0;
-let computerScore = 0;
+let humanChoice = getHumanChoice();
+let computerChoice = getComputerChoice();
