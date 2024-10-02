@@ -1,9 +1,9 @@
 function getComputerChoice() {
-    compChoice = Math.random()
-    if (compChoice < 0.33) {
+    let computerChoice = Math.random()
+    if (computerChoice < 0.33) {
         return console.log("rock")
     }
-    else if (compChoice > 0.33 && choice < 0.66) {
+    else if (computerChoice > 0.33 && computerChoice < 0.66) {
         return console.log("paper")
     }
     else {
@@ -12,25 +12,28 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let playerChoice = prompt("Rock, paper or scissors?\nEnter your choice and press OK:");
-    if (playerChoice === null) {
+    let humanChoice = prompt("Rock, paper or scissors?\nEnter your choice and press OK:");
+    if (humanChoice === null) {
         return
     }
-    else if (playerChoice.toLowerCase() == "rock") {
-        return console.log(playerChoice);
+    else if (humanChoice.toLowerCase() == "rock") {
+        return console.log(humanChoice);
     }
-    else if (playerChoice.toLowerCase() == "paper") {
-        return console.log(playerChoice);
+    else if (humanChoice.toLowerCase() == "paper") {
+        return console.log(humanChoice);
     }
-    else if (playerChoice.toLowerCase() == "scissors") {
-        return console.log(playerChoice);
+    else if (humanChoice.toLowerCase() == "scissors") {
+        return console.log(humanChoice);
     }
     else {
-        return invalidPlayerChoice()
+        return invalidhumanChoice()
     }
 }
 
-function invalidPlayerChoice() {
+function invalidhumanChoice() {
     alert("Whoops! That didn't work.\nTry entering your choice again...")
     return getHumanChoice()
 }
+
+let humanScore = 0;
+let computerScore = 0;
