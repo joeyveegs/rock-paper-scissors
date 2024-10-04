@@ -34,24 +34,3 @@ function invalidUserInput() {
     alert("Whoops! That didn't work.\nTry entering your choice again...")
     return getHumanChoice()
 }
-
-let humanScore = 0;
-let computerScore = 0;
-
-function playRound() {
-    let humanChoice = getHumanChoice()
-    let computerChoice = getComputerChoice()
-    if (humanChoice == computerChoice) {
-        return `It's a tie! You both chose ${computerChoice}`
-    }
-    else if ((humanChoice == "scissors" && computerChoice == "rock")
-        || (humanChoice == "rock" && computerChoice == "paper")
-        || (humanChoice == "paper" && computerChoice == "scissors")) {
-            return `You lost! The computer chose ${computerChoice}`
-    }
-    else if ((humanChoice == "paper" && computerChoice == "rock")
-        || (humanChoice == "scissors" && computerChoice == "paper")
-        || (humanChoice == "rock" && computerChoice == "scissors")) {
-            return `You won! The computer chose ${computerChoice}`
-    }
-}
