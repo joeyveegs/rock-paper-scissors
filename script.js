@@ -1,9 +1,9 @@
 function getComputerChoice() {
-    let compInput = Math.random()
-    if (compInput < 0.33) {
+    let computerChoice = Math.random()
+    if (computerChoice < 0.33) {
         return "rock"
     }
-    else if (compInput > 0.33 && compInput < 0.66) {
+    else if (computerChoice > 0.33 && computerChoice < 0.66) {
         return "paper"
     }
     else {
@@ -11,26 +11,38 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-    let userInput = prompt("Rock, paper or scissors?\nEnter your choice and press OK:")
-    if (userInput === null) {
+function getValidHumanChoice() {
+    let humanChoice = prompt("Rock, paper or scissors?\nEnter your choice and press OK:")
+    if (humanChoice === null) {
         return
     }
-    else if (userInput.toLowerCase() == "rock") {
+    else if (humanChoice.toLowerCase() == "rock") {
         return "rock"
     }
-    else if (userInput.toLowerCase() == "paper") {
+    else if (humanChoice.toLowerCase() == "paper") {
         return "paper"
     }
-    else if (userInput.toLowerCase() == "scissors") {
+    else if (humanChoice.toLowerCase() == "scissors") {
         return "scissors"
     }
     else {
-        return invalidUserInput()
+        return flagInvalidHumanChoice()
     }
 }
 
-function invalidUserInput() {
+function flagInvalidHumanChoice() {
     alert("Whoops! That didn't work.\nTry entering your choice again...")
-    return getHumanChoice()
+    return getValidHumanChoice()
 }
+
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+    // your code here!
+}
+
+const humanSelection = getValidHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
