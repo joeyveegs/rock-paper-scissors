@@ -58,7 +58,31 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const humanSelection = getValidHumanChoice();
-const computerSelection = getComputerChoice();
+function playGame() {
+    const humanSelectionRound1 = getValidHumanChoice();
+    const computerSelectionRound1 = getComputerChoice();
+    playRound(humanSelectionRound1, computerSelectionRound1);
+    const humanSelectionRound2 = getValidHumanChoice();
+    const computerSelectionRound2 = getComputerChoice();
+    playRound(humanSelectionRound2, computerSelectionRound2);
+    const humanSelectionRound3 = getValidHumanChoice();
+    const computerSelectionRound3 = getComputerChoice();
+    playRound(humanSelectionRound3, computerSelectionRound3);
+    const humanSelectionRound4 = getValidHumanChoice();
+    const computerSelectionRound4 = getComputerChoice();
+    playRound(humanSelectionRound4, computerSelectionRound4);
+    const humanSelectionRound5 = getValidHumanChoice();
+    const computerSelectionRound5 = getComputerChoice();
+    playRound(humanSelectionRound5, computerSelectionRound5);
+    if (humanScore == computerScore) {
+        alert(`The game ended in a tie! You both scored ${computerScore}.`)
+    }
+    else if (humanScore > computerScore) {
+        alert(`You won the game!\nYou scored ${humanScore} and the computer scored ${computerScore}.`)
+    }
+    else if (humanScore < computerScore) {
+        alert(`You lost the game!\nYou scored ${humanScore} and the computer scored ${computerScore}.`)
+    }
+}
 
-playRound(humanSelection, computerSelection);
+playGame();
